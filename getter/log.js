@@ -5,10 +5,7 @@ const log = {
 
 Object.defineProperty(log, 'currentDate', {
     value: new Date(),
-    enumerable: false
+    configurable: false
 })
-
-for (let key in log) {
-    console.log(key);
-}
-// currentDate not found.
+delete log.currentDate;
+// TypeError: Cannot delete property 'currentDate' of #<Object>
