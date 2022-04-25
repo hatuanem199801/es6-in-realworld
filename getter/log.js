@@ -1,9 +1,19 @@
 const log = {
-    currentDate: 1,
     messages: ["Error: receive records", "Success: wrote data to \"product\" table."]
 };
 
+let currentDate = "Unknown";
 Object.defineProperty(log, 'currentDate', {
-    value: new Date(),
+    set(value) {
+        currentDate = value;
+    },
+    get() {
+        return currentDate;
+    },
+    enumerable: false,
+    configurable: false,
 });
-console.log(log);
+
+log.currentDate = new Date();
+
+console.log(log.currentDate);
