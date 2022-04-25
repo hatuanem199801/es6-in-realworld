@@ -1,0 +1,22 @@
+{
+  "name": "es6-in-real-world",
+  "version": "1.0.0",
+  "description": "Self-learning es6 base on the cases in the real world",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatuanem199801/es6-in-realworld.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/hatuanem199801/es6-in-realworld/issues"
+  },
+  "homepage": "https://github.com/hatuanem199801/es6-in-realworld#readme"
+}
