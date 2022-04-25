@@ -7,4 +7,5 @@ const product = (title, salePrice, oriPrice, description) => ({
 });
 
 const apple = product('Apple', 200, 300, "This fruit is very heathy.");
+delete apple.title;
 console.log(apple.title);
