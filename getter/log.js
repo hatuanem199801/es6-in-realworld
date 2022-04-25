@@ -5,7 +5,5 @@ const log = {
 
 Object.defineProperty(log, 'currentDate', {
     value: new Date(),
-    configurable: false
-})
-delete log.currentDate;
-// TypeError: Cannot delete property 'currentDate' of #<Object>
+});
+console.log(log);
