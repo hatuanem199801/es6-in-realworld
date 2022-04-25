@@ -1,12 +1,14 @@
 const log = {
-    currentDate: 1
+    currentDate: 1,
+    messages: ["Error: receive records", "Success: wrote data to \"product\" table."]
 };
 
 Object.defineProperty(log, 'currentDate', {
     value: new Date(),
-    writable: false
+    enumerable: false
 })
 
-log.currentDate = "Hallo, May!";
-// TypeError: Cannot assign to read only property 'currentDate' of object '#<Object>'
-console.log(log.currentDate);
+for (let key in log) {
+    console.log(key);
+}
+// currentDate not found.
