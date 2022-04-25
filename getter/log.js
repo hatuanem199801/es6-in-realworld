@@ -3,7 +3,9 @@ const log = {
 };
 
 Object.defineProperty(log, 'currentDate', {
-    value: new Date()
+    get() {
+        return new Date();
+    }
 })
 
 console.log(log.currentDate);
