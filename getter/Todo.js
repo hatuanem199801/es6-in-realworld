@@ -27,9 +27,6 @@ class Todo {
     }
 }
 
-
-(async() => {
-    const todo = new Todo();
-    const data = await todo.getListTodo;
-    console.log(data);
-})();
+const todo = new Todo();
+const data = await todo.getListTodo;
+console.log(data);
