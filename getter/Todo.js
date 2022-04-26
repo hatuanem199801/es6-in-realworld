@@ -3,6 +3,11 @@ class Todo {
         delete this.getTodo;
         return "I want to do something ..." ;
     }
+    get image() {
+        // never initial value when we don't call that property.
+        console.log("image getter calls");
+        return "This is image";
+    }
 }
 
-console.log(Todo.getTodo);
+const todo = new Todo();
