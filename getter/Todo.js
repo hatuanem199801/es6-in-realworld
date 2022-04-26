@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 class Todo {
     static get getTodo() {
         delete this.getTodo;
@@ -8,19 +9,16 @@ class Todo {
         console.log("image getter calls");
         return "This is image";
     }
+    get getOneTodo() {
+        return fetch("https://jsonplaceholder.typicode.com/todos/1")
+                .then(res => res.json())
+                .catch(err => console.log(err));
+    }
 }
 
-const todo = new Todo();
 
-
-console.log(
-    Object.getOwnPropertyDescriptor(
-        Object.getPrototypeOf(todo), 'image'
-    )
-)
-// {
-//     get: [Function: get image],
-//     set: undefined,
-//     enumerable: false,
-//     configurable: true
-// }
+(async() => {
+    const todo = new Todo();
+    const data = await todo.getOneTodo;
+    console.log(data);
+})();

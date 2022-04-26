@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/hatuanem199801/es6-in-realworld/issues"
   },
-  "homepage": "https://github.com/hatuanem199801/es6-in-realworld#readme"
+  "homepage": "https://github.com/hatuanem199801/es6-in-realworld#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.3"
+  }
 }
