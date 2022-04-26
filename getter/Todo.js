@@ -14,11 +14,22 @@ class Todo {
                 .then(res => res.json())
                 .catch(err => console.log(err));
     }
+    get getListTodo() {
+        return (async() => {
+            try {
+                return await fetch("https://jsonplaceholder.typicode.com/todos")
+                    .then(res => res.json())
+                    .catch(err => console.log(err));
+            } catch (error) {
+                console.error(err);
+            }
+        })();
+    }
 }
 
 
 (async() => {
     const todo = new Todo();
-    const data = await todo.getOneTodo;
+    const data = await todo.getListTodo;
     console.log(data);
 })();
