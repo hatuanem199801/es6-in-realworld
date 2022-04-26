@@ -4,14 +4,22 @@ const order = {
     values: [],
     currentDateOrder: null,
     oneHundred: 0,
+    customer: null,
+
+    /**
+     * @param {string} value
+     */
+    set customer(value) { // RangeError: Maximum call stack size exceeded
+        this.customer = value;
+    },
+
     /**
      * @param {string} name
      */
-    set current(name, secondArgs) {
+    set current(name) {
         this.values.push(name);
     },
 
-    
     /**
      * set date of order.
      * @param {Date} value
@@ -30,6 +38,8 @@ const order = {
     }
 }
 
+order.customer = "Em Ha Tuan";
+
 order.current = 'NEW';
 order.current = 'IN PROGRESS';
 order.current = 'DELIVERY';
@@ -39,5 +49,4 @@ order.currentDateOrder = new Date();
 
 order[100] = 200;
 
-console.log(order.values);
-console.log(order.oneHundred);
+console.log(order);
