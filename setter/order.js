@@ -7,7 +7,7 @@ const order = {
     /**
      * @param {string} name
      */
-    set current(name) {
+    set current(name, secondArgs) {
         this.values.push(name);
     },
 
