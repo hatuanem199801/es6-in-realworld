@@ -9,7 +9,7 @@ const order = {
     /**
      * @param {string} value
      */
-    set customer(value) { // RangeError: Maximum call stack size exceeded
+    set setCustomer(value) {
         this.customer = value;
     },
 
@@ -38,7 +38,9 @@ const order = {
     }
 }
 
-order.customer = "Em Ha Tuan";
+order.setCustomer = "Em Ha Tuan";
+
+delete order.current; // Delete set property with delete operator.
 
 order.current = 'NEW';
 order.current = 'IN PROGRESS';
@@ -48,5 +50,6 @@ order.current = 'DONE';
 order.currentDateOrder = new Date();
 
 order[100] = 200;
+
 
 console.log(order);
