@@ -11,3 +11,16 @@ class Todo {
 }
 
 const todo = new Todo();
+
+
+console.log(
+    Object.getOwnPropertyDescriptor(
+        Object.getPrototypeOf(todo), 'image'
+    )
+)
+// {
+//     get: [Function: get image],
+//     set: undefined,
+//     enumerable: false,
+//     configurable: true
+// }
