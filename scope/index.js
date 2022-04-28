@@ -1,5 +1,7 @@
-for (let i = 0; i < 10; i++) {
-    console.log("Em");
-}
+const user = {
+    username: "Em"
+};
 
-console.log(i); // ReferenceError: i is not defined
+user.username = "Tuan";
+
+console.log(user);
