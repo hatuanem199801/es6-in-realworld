@@ -1,8 +1,7 @@
-let age = 21;
-
-console.log(age);
+const age = 21;
 
 if (true) {
-    let age = 22;
-    console.log(age);
+    age = 22;
 }
+
+console.log(age);
