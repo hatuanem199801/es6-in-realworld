@@ -1,7 +1,5 @@
-const age = 21;
-
-if (true) {
-    age = 22;
+for (var i = 0; i < 10; i++) {
+    console.log("Em");
 }
 
-console.log(age);
+console.log(i);
