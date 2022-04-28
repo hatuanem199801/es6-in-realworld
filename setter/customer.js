@@ -14,13 +14,11 @@ Object.defineProperty(customer, 'setFirstName', {
 });
 
 Object.defineProperty(customer, 'getAvatar', {
-    set: async function(value) {
-        this.avatar = await fetch(value).then(res => res.arrayBuffer());
+    set: function(value) {
+        this.avatar = value;
     }
 })
 
 customer.setFirstName = "Em Ha Tuan";
-(async function() {
-    await (customer.getAvatar = "https://picsum.photos/480");
-    console.log(customer);
-})();
+customer.getAvatar = "https://picsum.photos/1080";
+console.log(customer);
